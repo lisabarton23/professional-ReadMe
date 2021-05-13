@@ -2,6 +2,7 @@
 const inquirer = require ('inquirer');
 const fs = require ('fs');
 const generateMarkdown = require('./utils/generateMarkdown')
+const path = require('path')
 // TODO: Create an array of questions for user input
 // inquirer.prompt ( [
 
@@ -36,6 +37,14 @@ name : "license",
 //how do i format this in a presentable way
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
+
+ return fs.writeFile(path.join(__dirname + "/readmes", fileName), data, 
+ (err) =>
+ err ? 
+ console.error(err) : 
+ console.log("Success!")
+        );
+    //path "join" method
 
 
 
