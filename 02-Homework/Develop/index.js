@@ -24,13 +24,37 @@ message: " Write a description regarding your project",
 name: "description"
 
 },
+{type: "input",
+message: "What steps need to be taken to install your project?",
+name: "installation"
+},
+{type: "input",
+message: "What are the instructions needed to use your project?",
+name: "usage"
+},
+{type: "input",
+message: "List your collaborators",
+name: "credits"
+},
 {type :"list",
 message : "What license would you like to use?",
 choices: ["MIT", "ISC", "GPL"],
 name : "license",
 
 },
+{type: "input",
+message: "Please include any Tests you used",
+name: "tests"
+},
+{type: "input",
+message: " What is your GitHub username?",
+name: "github"
+},
+{type: "input",
+message: "Enter your email to for questions:",
+name: "questions"
 
+},
 ];
 //project name, project description, github user,name, linked url...
 //build out questions with the inqurier and then im going to console log response. once i recive responses build out functionality to create readme file.
